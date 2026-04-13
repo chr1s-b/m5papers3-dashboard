@@ -45,11 +45,14 @@ void display_init()
     canvas_wifi.setColorDepth(1);  canvas_wifi.createSprite(WIFI_W,  WIFI_H);
 
     // Show connecting message while WiFi/NTP initialise
+    // SSID text — bottom right of screen, indicator dot sits beside it
+    char connecting_text[64];
+    sprintf(connecting_text, "Connecting to %s", wifi_ssid);
     display.fillScreen(TFT_WHITE);
     display.setFont(&fonts::Font4);
     display.setTextColor(TFT_BLACK, TFT_WHITE);
     display.setTextDatum(textdatum_t::middle_center);
-    display.drawString("Connecting...", display.width() / 2, display.height() / 2);
+    display.drawString(connecting_text, display.width() / 2, display.height() / 2);
 }
 
 // ── Private helpers ──────────────────────────────────────────────
