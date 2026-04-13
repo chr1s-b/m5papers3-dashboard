@@ -1,0 +1,1 @@
+Configure `config.h` from `config.h.example` before building.

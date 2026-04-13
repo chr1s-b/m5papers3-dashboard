@@ -1,0 +1,13 @@
+#pragma once
+#include <cstdint>
+
+// ── User settings — edit these ───────────────────────────────────
+static const char* wifi_ssid      = "your_wifi_ssid";
+static const char* wifi_password  = "your_wifi_password";
+// ────────────────────────────────────────────────────────────────
+
+// NTP re-sync interval (ms) — default 10 minutes
+static const uint32_t NTP_SYNC_INTERVAL = 600000UL;
+
+// Display update interval (ms)
+static const uint32_t DRAW_INTERVAL = 1000UL;
